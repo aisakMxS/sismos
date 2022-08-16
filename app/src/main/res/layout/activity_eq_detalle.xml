@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            type="com.example.appearthqueke.Earthquake"
+            name="Earthquake" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".EqDetalle">
+
+        <TextView
+            android:id="@+id/jlb_mag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@{String.valueOf(Earthquake.mangnitude)}"
+            android:textAlignment="center"
+            android:textSize="75sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="5.0" />
+
+        <TextView
+            android:id="@+id/lbl_lat"
+            android:layout_width="62dp"
+            android:layout_height="19dp"
+            android:text="@{String.valueOf(Earthquake.latitude)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jlb_lon"
+            tools:text="197845.325" />
+
+        <TextView
+            android:id="@+id/jlb_lon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@{String.valueOf(Earthquake.longitude)}"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/jlb_mag"
+            tools:text="197845.325" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
